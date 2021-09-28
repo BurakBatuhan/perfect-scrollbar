@@ -21,7 +21,11 @@ export default cls;
 const scrollingClassTimeout = { x: null, y: null };
 
 export function addScrollingClass(i, x) {
-  const classList = i.element.classList;
+  console.log(i)
+  if(i.element.classList){
+   const classList = i.element.classList;
+  }
+  
   const className = cls.state.scrolling(x);
 
   if (classList.contains(className)) {
